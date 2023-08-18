@@ -34,7 +34,7 @@ Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+We have a mailing list located at: https://t.me/+Iu2BS55XVExmMWEy
 
 License
 -------
