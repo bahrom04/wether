@@ -1,37 +1,54 @@
-const api_key = "00de3e3400f5ef50f02428295585eba5"
-const city = "Bukhara"
+const endpoint = `https://fastapi-versel-eta.vercel.app/2426803/api`
 
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`)
+function handleResponse(response) {
+     console.log(response);
 
-     .then(response => response.json())
-     .then(response => {
+     let time = response.current_time - 273.15;
+     let pressure = response.pressure;
 
-          console.log(response)
+     document.getElementById("weather__city").innerHTML = "Warrington";
+     document.getElementById("time").innerHTML = time;
+     document.getElementById("pressure").innerHTML = `Pressure: ${pressure.toFixed(0)} hPa`;
+}
 
-          let city = response.name
-          let country = response.sys.country
-          let temp = response.main.temp - 273.15 // Kelvin to Celsius
-          let min_temp = response.main.temp_min - 273.15 // Kelvin to Celsius
-          let max_temp = response.main.temp_max - 273.15 // Kelvin to Celsius
-          let feels_like = response.main.feels_like - 273.15 // Kelvin to Celsius
-          let wind = response.wind.speed
-          let humidity = response.main.humidity
-          let pressure = response.main.pressure
+// Check if JSONP is supported by the server
+if ('fetch' in window) {
+     fetch(`${endpoint}?callback=handleResponse`)
+          .then(response => response.json())
+          .catch(err => {
+               console.log(err);
+          });
+} else {
+     console.log("JSONP not supported.");
+}
 
 
-          document.getElementById("weather__city").innerHTML = city
-          document.getElementById("weather__country").innerHTML = country
-          document.getElementById("temp").innerHTML = `${temp.toFixed(0)} °C`
-          document.getElementById("min").innerHTML = `min: ${min_temp.toFixed(0)} °C`
-          document.getElementById("max").innerHTML = `max: ${max_temp.toFixed(0)} °C`
-          document.getElementById("feels_like").innerHTML = `${feels_like.toFixed(0)} °C`
-          document.getElementById("wind").innerHTML = `${wind.toFixed(0)} m/s`
-          document.getElementById("humidity").innerHTML = `${humidity.toFixed(0)} %`
-          document.getElementById("pressure").innerHTML = `${pressure.toFixed(0)} hPa`
 
-          
-     })
-     .catch(err => {
-          console.log(err)
-     })
+
+
+
+
+
+
+// fetch(`https://fastapi-versel-eta.vercel.app/${city}`)
+
+//      .then(response => response.json())
+//      .then(response => {
+
+//           console.log(response)
+
+//           let city = response.data.name
+//           let temp = response.data.main.temp - 273.15 // Kelvin to Celsius
+//           let pressure = response.data.main.pressure
+
+
+//           document.getElementById("weather__city").innerHTML = city
+//           document.getElementById("temp").innerHTML = `${temp.toFixed(0)} °C`
+//           document.getElementById("pressure").innerHTML = `Pressure: ${pressure.toFixed(0)} hPa`
+
+
+//      })
+//      .catch(err => {
+//           console.log(err)
+//      })
