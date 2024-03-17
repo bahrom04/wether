@@ -1,27 +1,27 @@
-const endpoint = `https://fastapi-versel-eta.vercel.app/2426803/api`
+const endpoint = "https://fastapi-versel-eta.vercel.app/2426803/api"
 
 
-function handleResponse(response) {
-     console.log(response);
+fetch(endpoint)
 
-     let time = response.current_time - 273.15;
-     let pressure = response.pressure;
+     .then(response => response.json())
+     .then(response => {
 
-     document.getElementById("weather__city").innerHTML = "Warrington";
-     document.getElementById("time").innerHTML = time;
-     document.getElementById("pressure").innerHTML = `Pressure: ${pressure.toFixed(0)} hPa`;
-}
+          console.log(response)
 
-// Check if JSONP is supported by the server
-if ('fetch' in window) {
-     fetch(`${endpoint}?callback=handleResponse`)
-          .then(response => response.json())
-          .catch(err => {
-               console.log(err);
-          });
-} else {
-     console.log("JSONP not supported.");
-}
+         
+          let pressure = response.pressure
+          let current_time = response.current_time
+
+
+          document.getElementById("weather__city").innerHTML = "Warrington"
+          document.getElementById("time").innerHTML = pressure
+          document.getElementById("pressure").innerHTML = `${pressure.toFixed(0)} hPa`
+
+
+     })
+     .catch(err => {
+          console.log(err)
+     })
 
 
 
