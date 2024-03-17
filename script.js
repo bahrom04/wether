@@ -14,7 +14,7 @@ fetch(endpoint)
 
 
           document.getElementById("weather__city").innerHTML = "Warrington"
-          document.getElementById("time").innerHTML = pressure
+          document.getElementById("time").innerHTML = current_time
           document.getElementById("pressure").innerHTML = `${pressure.toFixed(0)} hPa`
 
 
