@@ -6,7 +6,7 @@
 }
 
 body {
-    background: rgba(78, 10, 110, 0.934)
+    background: url("istockphoto-1478776181-640x640.jpg")
 }
 
 .app {
@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     margin-top: 100px;
     padding: 30px;
-    background: #fff;
+    background: #9c5fb4;
     border-radius: 10px;
 }
 

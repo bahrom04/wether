@@ -1,93 +1,49 @@
 const questions = [{
-        question: "Which is the largest animal?",
-        answers: [
-            { text: "dog", correct: false },
-            { text: "cat", correct: false },
-            { text: "blue whale", correct: true },
-            { text: "cow", correct: false },
-        ]
-    },
-    {
-        question: "Which is the smallest animal?",
-        answers: [
-            { text: "ant", correct: true },
-            { text: "elephant", correct: false },
-            { text: "mouse", correct: false },
-            { text: "shark", correct: false },
-        ]
-    },
-    {
-        question: "Which planet is closest to the sun?",
-        answers: [
-            { text: "Mars", correct: false },
-            { text: "Jupiter", correct: false },
-            { text: "Mercury", correct: true },
-            { text: "Venus", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 1 begin?",
-        answers: [
-            { text: "1914", correct: true },
-            { text: "1939", correct: false },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    },
-    {
-        question: "When did World War 2 begin?",
-        answers: [
-            { text: "1914", correct: false },
-            { text: "1939", correct: true },
-            { text: "1945", correct: false },
-            { text: "1918", correct: false },
-        ]
-    }
+    question: "How do you tell frontend developer without telling frontend developer",
+    answers: [
+        { text: "avtobuschi okani gapi", correct: false },
+        { text: "I will sell my computer to buy old samsung android phone to download chatGPT app and i will ask from it", correct: false },
+        { text: "Lorem Ipsum", correct: true },
+        { text: "python manage.py runserver", correct: false },
+    ]
+},
+{
+    question: "How to earn first money as a junior developer in 2024?",
+    answers: [
+        { text: "Sell your computer", correct: true },
+        { text: "Broke your computer and give it to your support servise to fix it for free but you saved some money in your pocket", correct: false },
+        { text: "print($ 5000)", correct: false },
+        { text: "None", correct: false },
+    ]
+},
+{
+    question: "As a programmer, where do you see yourself 10 years from now?",
+    answers: [
+        { text: "I see myself as the world's leading expert in programming quantum spaghetti code for intergalactic spaghetti monsters.", correct: false },
+        { text: "I see myself as the CEO of a startup that develops AI-powered socks that can write code while keeping your feet warm, revolutionizing the programming industry one cozy step at a time.", correct: false },
+        { text: "Sitting in front of a computer, probably programming", correct: true },
+        { text: "I see myself coding underwater with a team of dolphins, developing software for a new era of aquatic computing.", correct: false },
+    ]
+},
+{
+    question: "How to optimize code and save time to debug?",
+    answers: [
+        { text: "CTRL+C and CTRL+V", correct: true },
+        { text: "Read the documentation", correct: false },
+        { text: "Ask from Stack Overflow", correct: false },
+        { text: "Watch anime", correct: false },
+    ]
+},
+{
+    question: "What is the most popular programming problem?",
+    answers: [
+        { text: "Missing a Semicolon.", correct: true },
+        { text: "To say your relatives that you are not Printer master", correct: false },
+        { text: "Coding without ChatGPT", correct: false },
+        { text: "When they forget to save their code", correct: false },
+    ]
+}
+
 ];
 
 const questionElement = document.getElementById("question");
@@ -149,7 +105,7 @@ function selectAnswer(e) {
     if (currentQuestionIndex === questions.length) {
         nextButton.innerHTML = "Finish";
     }
-    nextButton.onclick = function() {
+    nextButton.onclick = function () {
         if (currentQuestionIndex === questions.length) {
             alert(`You scored ${score} out of ${questions.length}`);
             startQuiz();
