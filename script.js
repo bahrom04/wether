@@ -42,6 +42,51 @@ const questions = [{
             { text: "1945", correct: false },
             { text: "1918", correct: false },
         ]
+    },
+    {
+        question: "When did World War 2 begin?",
+        answers: [
+            { text: "1914", correct: false },
+            { text: "1939", correct: true },
+            { text: "1945", correct: false },
+            { text: "1918", correct: false },
+        ]
+    },
+    {
+        question: "When did World War 2 begin?",
+        answers: [
+            { text: "1914", correct: false },
+            { text: "1939", correct: true },
+            { text: "1945", correct: false },
+            { text: "1918", correct: false },
+        ]
+    },
+    {
+        question: "When did World War 2 begin?",
+        answers: [
+            { text: "1914", correct: false },
+            { text: "1939", correct: true },
+            { text: "1945", correct: false },
+            { text: "1918", correct: false },
+        ]
+    },
+    {
+        question: "When did World War 2 begin?",
+        answers: [
+            { text: "1914", correct: false },
+            { text: "1939", correct: true },
+            { text: "1945", correct: false },
+            { text: "1918", correct: false },
+        ]
+    },
+    {
+        question: "When did World War 2 begin?",
+        answers: [
+            { text: "1914", correct: false },
+            { text: "1939", correct: true },
+            { text: "1945", correct: false },
+            { text: "1918", correct: false },
+        ]
     }
 ];
 
